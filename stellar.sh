@@ -103,7 +103,7 @@ curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 
 
 
-GITHUB_TOKEN="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"
+GITHUB_TOKEN="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"
 
 REPO_URL="https://${GITHUB_TOKEN}@github.com/rainmc0123/RainPrem.git"
 
@@ -126,28 +126,6 @@ rm /var/www/stellarrimake.zip
 cd /var/www/pterodactyl
 yarn add react-feather
 yarn
-
-
-# Build production dan perbaiki jika error
-
-if ! yarn build:production; then
-
-  echo "Kelihatannya ada kesalahan.. Proses fix.."
-
-  export NODE_OPTIONS=--openssl-legacy-provider
-
-  yarn
-
-  yarn add react-feather 
-
-  npx update-browserslist-db@latest
-
-  yarn build:production
-
-fi
-
-
-echo -e "${BLUE} KETIK yes UNTUK MELANJUTKAN${RESET}"
 
 php artisan migrate --force
 
