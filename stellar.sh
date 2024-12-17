@@ -103,7 +103,7 @@ curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 
 
 
-GITHUB_TOKEN="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"
+GITHUB_TOKEN="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"
 
 REPO_URL="https://${GITHUB_TOKEN}@github.com/rainmc0123/RainPrem.git"
 
